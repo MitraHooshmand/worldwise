@@ -7,7 +7,8 @@ import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
 import { CitiesProvider } from "./contexts/CitiesContext";
 import CityList from "./components/CityList";
-
+import CountryList from "./components/CountryList";
+import City from "./components/City.jsx";
 function App() {
   return (
     <CitiesProvider>
@@ -19,7 +20,8 @@ function App() {
           <Route path="App" element={<AppLayout />}>
             <Route index element={<p>💥index list</p>} />
             <Route path="cities" element={<CityList />} />
-            <Route path="countries" element={<p>forGDFGDFGFDm</p>} />
+            <Route path="cities/:id" element={<City />} />
+            <Route path="countries" element={<CountryList />} />
             <Route path="form" element={<p>form</p>} />
           </Route>
           <Route path="Login" element={<Login />} />

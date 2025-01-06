@@ -1,4 +1,4 @@
-// import Map from "../Map";
+import Map from "../components/Map.jsx";
 import Sidebar from "../components/Sidebar";
 // import User from "../User";
 
@@ -8,8 +8,8 @@ function AppLayout() {
   return (
     <div className={styles.app}>
       <Sidebar />
-      {/* <Map />
-      <User /> */}
+      <Map />
+      {/* <User /> */}
     </div>
   );
 }

@@ -3,6 +3,7 @@
 .cityItem:visited {
   display: flex;
   gap: 1.6rem;
+  margin: 8px;
   align-items: center;
 
   background-color: var(--color-dark--2);
@@ -21,7 +22,7 @@
 }
 
 .emoji {
-  font-size: 2.6rem;
+  font-size: 1.6rem;
   line-height: 1;
 }
 
