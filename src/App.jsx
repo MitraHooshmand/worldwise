@@ -9,6 +9,8 @@ import { CitiesProvider } from "./contexts/CitiesContext";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 import City from "./components/City.jsx";
+import Form from "./components/Form.jsx";
+import { Navigate } from "react-router-dom";
 function App() {
   return (
     <CitiesProvider>
@@ -18,11 +20,11 @@ function App() {
           <Route path="Product" element={<Product />} />
           <Route path="Pricing" element={<Pricing />} />
           <Route path="App" element={<AppLayout />}>
-            <Route index element={<p>💥index list</p>} />
+            <Route index element={<Navigate replace to="cities" />} />
             <Route path="cities" element={<CityList />} />
             <Route path="cities/:id" element={<City />} />
             <Route path="countries" element={<CountryList />} />
-            <Route path="form" element={<p>form</p>} />
+            <Route path="form" element={<Form />} />
           </Route>
           <Route path="Login" element={<Login />} />
           <Route path="*" element={<PageNotFound />} />
